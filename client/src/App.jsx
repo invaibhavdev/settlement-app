@@ -8,14 +8,14 @@ const App = () => {
   const { isAuthenticated } = useContext(AuthContext);
 
   return (
-    <Dashboard />
-    // <Routes>
-    //   <Route path="/login" element={<Login />} />
-    //   <Route
-    //     path="/"
-    //     element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
-    //   />
-    // </Routes>
+    // <Dashboard />
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route
+        path="/"
+        element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+      />
+    </Routes>
   );
 };
 
